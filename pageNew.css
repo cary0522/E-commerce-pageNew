@@ -41,7 +41,14 @@ img{
         top: 0px;
         right: 0px;
     }
-    
+
+    .product_introduction_btn{
+        position: absolute;
+        top: 200px;
+        right: 0px;
+
+    }
+
     .shopping_note{
         position: absolute;
         top: 300px;
