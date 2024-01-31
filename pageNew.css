@@ -42,11 +42,16 @@ img {
         right: 0px;
     }
 
+    .product_introduction_text{
+        padding: 40px;
+    }
+
     .input-group {
         position: absolute !important;
         top: 200px !important;
         right: 0px !important;
         width: 45% !important;
+        padding: 25px;
     }
 
     .shopping_note {
