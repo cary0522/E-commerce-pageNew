@@ -42,17 +42,16 @@ img{
         right: 0px;
     }
 
-    .product_introduction_text{
+    /* .product_introduction_text{
         position: absolute;
         top: 0%;
         right: 0%;
-    }
+    } */
 
     .shopping_note{
         position: absolute;
-        top: 50%;
-        right: 0%;
-        margin: 20px;
+        top: 50px;
+        right: 0px;
     }
 
     .information {
