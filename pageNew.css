@@ -16,11 +16,6 @@
     position: absolute;
     right: -1200px;
 }
-/* 
-.shopping_note{
-    top: 30%;
-    right: 10%;
-} */
 
 img{
     object-fit: fill;
@@ -45,6 +40,19 @@ img{
         background-color: #FFAF60;
         top: 0px;
         right: 0px;
+    }
+
+    .product_introduction_text{
+        position: absolute;
+        top: 0%;
+        right: 0%;
+    }
+
+    .shopping_note{
+        position: absolute;
+        top: 50%;
+        right: 0%;
+        margin: 20px;
     }
 
     .information {
