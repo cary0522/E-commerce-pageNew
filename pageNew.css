@@ -17,7 +17,7 @@
     right: -1200px;
 }
 
-img{
+img {
     object-fit: fill;
     width: 100%;
 }
@@ -42,14 +42,14 @@ img{
         right: 0px;
     }
 
-    .input-group{
+    .input-group {
         position: absolute !important;
         top: 200px !important;
         right: 0px !important;
-        width: 50% !important;
+        width: 45% !important;
     }
 
-    .shopping_note{
+    .shopping_note {
         position: absolute;
         top: 300px;
         right: 0px;
