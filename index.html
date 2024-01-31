@@ -74,6 +74,22 @@
     </script>
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        let productArr = [ ];
+
+        fetch("http://localhost:3001/").then(function getInformation(response){
+            return response.json()
+        }).then(function(json){
+            productArr = json;
+            let url = new URL(window.location.href);
+            for (let i = 0 ; i < productArr.length ; i ++){
+                if (url.search == `?${i}`){
+                    document.write(productArr[i].name);
+                }
+            }
+        })
+
+    </script>
 </body>
 
 </html>
