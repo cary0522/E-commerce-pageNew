@@ -100,21 +100,21 @@
                 if (url.search == `?${i}`) {
                     let newDiv = document.createElement("div");
                     newDiv.id = `newDiv${i}`;
-                    newDiv.className = "container-fluid d-flex flex-wrap justify-content-center position-relative m-5";
+                    newDiv.className = "container-fluid d-flex flex-wrap justify-content-center justify-content-md-start position-relative m-5";
                     newDiv.innerHTML = `
-                    <div class="product_introduction_img col-md-6 order-1 m-2">
+                    <div class="product_introduction_img col-12 col-md-6 order-1 m-2">
                         <img src="${productArr[i].image}" alt="" class="">
                     </div>
-                    <div class="product_introduction_img col-md-6 order-3 order-md-2 m-2">
-                        <img src="${productArr[i].image_one}" alt="" class="">
-                        <img src="${productArr[i].image_two}" alt="" class="">
+                    <div class="product_introduction_img col-12 col-md-6 order-3 order-md-2 m-2">
+                        <img src="${productArr[i].image_one}" alt="" class="m-1">
+                        <img src="${productArr[i].image_two}" alt="" class="m-1">
                     </div>
-                    <div class="product_introduction_text col-md-4 order-2 order-md-3 m-2">
+                    <div class="product_introduction_text col-12 col-md-4 order-2 order-md-3 m-2">
                         <h6 class="product_introduction_name">${productArr[i].name}</h6>
                         <p class="product_introduction_textcontent">${productArr[i].introduction}</p>
                         <p class="product_introduction_price">${productArr[i].price}</p>
                     </div>
-                    <div class="shopping_note col-md-4 order-4 m-2">
+                    <div class="shopping_note col-12 col-md-4 order-4 m-2">
                         <p class="fw-bold">購買須知</p>
                         <p>田語和以奶言。物西我冒三七神：步我課地立樹停止比起許兒枝黑、跑助美語喜得服土占合，時氣肉自都才讀風的花得它新年幼休香了經。真毛假幾來沒門工汗。
                         </p>
