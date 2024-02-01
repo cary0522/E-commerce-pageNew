@@ -38,7 +38,7 @@
                 <i class="fa-solid fa-heart"></i>Wish List</a>
             <a href="#" class="text-white text-decoration-none m-2">
                 <i class="fa-solid fa-cart-shopping"></i>Cart
-                <span class="badge bg-dange rounded-pill cartNum"></span>
+                <span class="badge bg-dange rounded-pill cartNum" id="cartNum"></span>
             </a>
         </div>
     </div>
@@ -103,18 +103,18 @@
                         <img src="${productArr[i].image_one}" alt="" class="my-1">
                         <img src="${productArr[i].image_two}" alt="" class="my-1">
                     </div>
-                    <div class="product_introduction_text col-12 col-md-4 order-2 m-2">
+                    <div class="product_introduction_text col-12 col-md-5 order-2 m-2 d-md-flex flex-md-wrap justify-content-md-center">
                         <h6 class="product_introduction_name">${productArr[i].name}</h6>
                         <p class="product_introduction_textcontent">${productArr[i].introduction}</p>
                         <p class="product_introduction_price">${productArr[i].price}</p>
                     </div>
                     <div class="product_introduction_btn input-group m-2 text-center order-3">
-                        <select name="product_introduction_select" id="" class="form-select selectNum">
+                        <select name="product_introduction_select" id="selectNum" class="form-select selectNum">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                         </select>
-                        <button class="btn btn_add btn-warning btn-outline-secondary">加入購物車</button>
+                        <button class="btn btn_add btn-warning btn-outline-secondary" id="btn_add">加入購物車</button>
                     </div>
                     <div class="shopping_note col-12 col-md-5 order-5 m-2">
                         <p class="fw-bold">購買須知</p>
@@ -130,9 +130,9 @@
             }
         })
 
-        $(".btn_add").click(function addCartNum(){
-            let selectNum = $(".selectNum").val();
-            $(".cartNum").text(selectNum);
+        $("#btn_add").click(function addCartNum(){
+            let selectNum = $("#selectNum").val();
+            $("#cartNum").text(selectNum);
         })
     </script>
 </body>
