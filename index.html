@@ -87,15 +87,15 @@
         fetch("http://localhost:3001/").then(function getInformation(response) {
             return response.json()
         }).then(function (json) {
-            productArr = json;
-            let url = new URL(window.location.href);
-            for (let i = 0; i < productArr.length; i++) {
-                if (url.search == `?${i}`) {
-                    let newDiv = document.createElement("div");
-                    newDiv.id = `newDiv${i}`;
-                    newDiv.className =
-                        "container-fluid d-flex flex-wrap justify-content-center justify-content-md-start position-relative m-5";
-                    newDiv.innerHTML = `
+                productArr = json;
+                let url = new URL(window.location.href);
+                for (let i = 0; i < productArr.length; i++) {
+                    if (url.search == `?${i}`) {
+                        let newDiv = document.createElement("div");
+                        newDiv.id = `newDiv${i}`;
+                        newDiv.className =
+                            "container-fluid d-flex flex-wrap justify-content-center justify-content-md-start position-relative m-5";
+                        newDiv.innerHTML = `
                     <div class="product_introduction_img col-12 col-md-6 order-1 m-2">
                         <img src="${productArr[i].image}" alt="" class="">
                     </div>
@@ -104,9 +104,9 @@
                         <img src="${productArr[i].image_two}" alt="" class="my-1">
                     </div>
                     <div class="product_introduction_text col-12 col-md-5 order-2 m-2 d-md-flex flex-wrap justify-content-md-center">
-                        <h6 class="product_introduction_name">${productArr[i].name}</h6>
-                        <p class="product_introduction_textcontent">${productArr[i].introduction}</p>
-                        <p class="product_introduction_price">${productArr[i].price}</p>
+                        <h6 class="product_introduction_name col-12">${productArr[i].name}</h6>
+                        <p class="product_introduction_textcontent col-12">${productArr[i].introduction}</p>
+                        <p class="product_introduction_price col-12">${productArr[i].price}</p>
                     </div>
                     <div class="product_introduction_btn input-group m-2 text-center order-3">
                         <select name="product_introduction_select" id="selectNum" class="form-select selectNum">
@@ -125,14 +125,16 @@
                         </p>
                     </div>
                     `
-                    $(".product_introduction").append(newDiv);
+                        $(".product_introduction").append(newDiv);
+                    }
                 }
-            }
-        })
+                $("#btn_add").click(function () {
+                    console.log($("#selectNum").val());
+                })
 
-        $("#btn_add").click(function (){
-            console.log($("#selectNum").val());
-        })
+            }
+
+        )
     </script>
 </body>
 
