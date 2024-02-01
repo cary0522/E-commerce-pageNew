@@ -103,7 +103,7 @@
                         <img src="${productArr[i].image_one}" alt="" class="my-1">
                         <img src="${productArr[i].image_two}" alt="" class="my-1">
                     </div>
-                    <div class="product_introduction_text col-12 col-md-5 order-2 m-2 d-md-flex flex-md-wrap justify-content-md-center">
+                    <div class="product_introduction_text col-12 col-md-5 order-2 m-2 d-md-flex flex-wrap justify-content-md-center">
                         <h6 class="product_introduction_name">${productArr[i].name}</h6>
                         <p class="product_introduction_textcontent">${productArr[i].introduction}</p>
                         <p class="product_introduction_price">${productArr[i].price}</p>
@@ -132,7 +132,7 @@
 
         $("#btn_add").click(function addCartNum(){
             let selectNum = $("#selectNum").val();
-            $("#cartNum").text(selectNum);
+            console.log(selectNum);
         })
     </script>
 </body>
