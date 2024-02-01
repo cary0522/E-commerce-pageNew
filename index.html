@@ -37,7 +37,9 @@
             <a href="#" class="text-white text-decoration-none m-2">
                 <i class="fa-solid fa-heart"></i>Wish List</a>
             <a href="#" class="text-white text-decoration-none m-2">
-                <i class="fa-solid fa-cart-shopping"></i>Cart</a>
+                <i class="fa-solid fa-cart-shopping"></i>Cart
+                <span class="badge bg-dange rounded-pill cartNum"></span>
+            </a>
         </div>
     </div>
 
@@ -107,12 +109,12 @@
                         <p class="product_introduction_price">${productArr[i].price}</p>
                     </div>
                     <div class="product_introduction_btn input-group m-2 text-center order-3">
-                        <select name="product_introduction_select" id="" class="form-select">
+                        <select name="product_introduction_select" id="" class="form-select selectNum">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                         </select>
-                        <button class="btn">加入購物車</button>
+                        <button class="btn btn_add">加入購物車</button>
                     </div>
                     <div class="shopping_note col-12 col-md-5 order-5 m-2">
                         <p class="fw-bold">購買須知</p>
@@ -126,6 +128,10 @@
                     $(".product_introduction").append(newDiv);
                 }
             }
+        })
+
+        $(".btn_add").click(function addCartNum(){
+            $(".cartNum").text = $(".selectNum").value;
         })
     </script>
 </body>
