@@ -17,6 +17,10 @@
     right: -1200px;
 }
 
+.cartNum{
+    background-color: red !important;
+}
+
 img {
     object-fit: fill;
     width: 100%;
