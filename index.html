@@ -114,7 +114,7 @@
                             <option value="2">2</option>
                             <option value="3">3</option>
                         </select>
-                        <button class="btn btn_add">加入購物車</button>
+                        <button class="btn btn_add btn-warning btn-outline-secondary">加入購物車</button>
                     </div>
                     <div class="shopping_note col-12 col-md-5 order-5 m-2">
                         <p class="fw-bold">購買須知</p>
@@ -131,7 +131,8 @@
         })
 
         $(".btn_add").click(function addCartNum(){
-            $(".cartNum").text = $(".selectNum").value;
+            let selectNum = $(".selectNum").val();
+            $(".cartNum").text(selectNum);
         })
     </script>
 </body>
